@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>S.A Intelligent Machine</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+            color: white;
+            text-align: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        h1 {
+            font-size: 3em;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px #000;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        input[type=text] {
+            width: 400px;
+            padding: 10px;
+            font-size: 1.2em;
+            border-radius: 8px;
+            border: none;
+        }
+        input[type=submit] {
+            padding: 10px 20px;
+            font-size: 1.2em;
+            border-radius: 8px;
+            border: none;
+            background-color: #ff7f50;
+            color: white;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        .answer {
+            background-color: rgba(0,0,0,0.6);
+            padding: 20px;
+            border-radius: 12px;
+            max-width: 600px;
+            text-align: left;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to S.A Intelligent Machine</h1>
+    <form method="post" action="/ask">
+        <input type="text" name="query" placeholder="Ask me anything..." required>
+        <input type="submit" value="Ask">
+    </form>
+    {% if answer %}
+    <div class="answer">{{ answer }}</div>
+    {% endif %}
+</body>
+</html>
