@@ -1,0 +1,4 @@
+wikipedia
+sentence-transformers
+requests
+python-dotenv
